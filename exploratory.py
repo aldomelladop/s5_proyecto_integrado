@@ -65,9 +65,8 @@ def normalize_column_names(data_frame: pd.DataFrame) -> pd.DataFrame:
     :return: DataFrame con nombres de columnas normalizados.
     """
     # *********** Corregir: Está colocando doble guión bajo ***********
-    data_frame.columns = [re.sub(r'(?<!^)(?=[A-Z])', '_', col).lower().replace(' ', '_')
+    data_frame.columns = [re.sub(r'(?<!^)(?=[A-Z])', '_', col).lower().replace(' ', '_').replace('__', '_')
                           for col in data_frame.columns]
-
     return data_frame
 
 
