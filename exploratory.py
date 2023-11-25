@@ -64,8 +64,10 @@ def normalize_column_names(data_frame: pd.DataFrame) -> pd.DataFrame:
     :param data_frame: DataFrame de pandas.
     :return: DataFrame con nombres de columnas normalizados.
     """
+    # *********** Corregir: Está colocando doble guión bajo ***********
     data_frame.columns = [re.sub(r'(?<!^)(?=[A-Z])', '_', col).lower().replace(' ', '_')
                           for col in data_frame.columns]
+
     return data_frame
 
 
@@ -104,21 +106,21 @@ def show_summary(data_frame: pd.DataFrame):
     print("\nValores Faltantes:")
     print(data_frame.isnull().sum())
 
-    # print("\nHistogramas para Variables Numéricas:")
-    # data_frame.hist(bins=15, figsize=(15, 10))
-    # plt.show()
+    print("\nHistogramas para Variables Numéricas:")
+    data_frame.hist(bins=15, figsize=(15, 10))
+    plt.show()
 
-    # if data_frame.select_dtypes(include=[np.number]).shape[1] > 1:
-    #     print("\nMapa de Calor de Correlación:")
-    #     sns.heatmap(data_frame.corr(), annot=True)
-    #     plt.show()
+    if data_frame.select_dtypes(include=[np.number]).shape[1] > 1:
+        print("\nMapa de Calor de Correlación:")
+        sns.heatmap(data_frame.corr(), annot=True)
+        plt.show()
 
-    # print("\nAnálisis de Variables Categóricas:")
-    # for column in data_frame.select_dtypes(include=['object']).columns:
-    #     print(f"\nDistribución de la variable {column}:")
-    #     print(data_frame[column].value_counts())
-    #     sns.countplot(y=column, data=data_frame)
-    #     plt.show()
+    print("\nAnálisis de Variables Categóricas:")
+    for column in data_frame.select_dtypes(include=['object']).columns:
+        print(f"\nDistribución de la variable {column}:")
+        print(data_frame[column].value_counts())
+        sns.countplot(y=column, data=data_frame)
+        plt.show()
 
 
 if __name__ == "__main__":
