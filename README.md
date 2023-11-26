@@ -1,34 +1,45 @@
-# Análisis Exploratorio de Datos (EDA) de Videojuegos
+# Proyecto de Análisis de Videojuegos
 
-Este proyecto realiza un Análisis Exploratorio de Datos (EDA) en un conjunto de datos de videojuegos. El objetivo es identificar patrones y tendencias clave que pueden ayudar a comprender mejor los factores que contribuyen al éxito de un videojuego.
+Este proyecto se centra en el análisis de datos de videojuegos. Utiliza técnicas de Análisis Exploratorio de Datos (EDA) para extraer insights y patrones que pueden ser útiles para entender las tendencias del mercado de videojuegos, la popularidad de diferentes géneros o plataformas, y otros aspectos relevantes en la industria.
 
-## Descripción
+## Descripción del Proyecto
 
-El script de Python proporcionado realiza un EDA básico sobre un archivo CSV que contiene datos de videojuegos. Las funcionalidades incluyen la normalización de nombres de columnas, la verificación y eliminación de duplicados, y la generación de un resumen estadístico y visualizaciones de los datos.
+El objetivo de este proyecto es realizar un análisis exhaustivo de un conjunto de datos de videojuegos. Esto incluye la exploración de ventas globales, valoraciones de usuarios y críticos, popularidad de géneros y plataformas, y más. El análisis busca identificar factores clave que contribuyen al éxito de un videojuego.
 
-## Características
+## Estructura del Proyecto
 
-El script incluye las siguientes características:
-- Lectura de archivos CSV desde múltiples ubicaciones.
-- Normalización de nombres de columnas para una manipulación de datos más fácil.
-- Detección y eliminación de filas duplicadas.
-- Generación de un resumen estadístico del conjunto de datos.
-- Visualización de datos mediante histogramas y mapas de calor.
-- Análisis de variables categóricas.
+- `EDA.py`: Script principal para el análisis exploratorio de datos.
+- `data/`: Directorio que contiene los conjuntos de datos en formato CSV.
+- `notebooks/`: Jupyter Notebooks con análisis exploratorios detallados y visualizaciones.
+- `scripts/`: Scripts adicionales utilizados en el proyecto.
+- `docs/`: Documentación del proyecto y resultados adicionales.
+- `README.md`: Archivo de descripción y guía de uso del proyecto.
 
-## Requisitos
+## Características Principales
 
-Para ejecutar este proyecto, necesitas tener instalado Python y las siguientes bibliotecas:
-- pandas
-- matplotlib
-- seaborn
-- numpy
+El proyecto incluye:
+- Limpieza y preparación de datos.
+- Análisis exploratorio detallado.
+- Visualización de datos con gráficos y mapas de calor.
+- Comparación de plataformas, géneros y otras categorías.
+- Análisis del impacto de las valoraciones en las ventas.
 
-## Uso
+## Tecnologías Utilizadas
 
-Para ejecutar el análisis, necesitas tener un archivo CSV con datos de videojuegos. El archivo debe estar en el directorio de trabajo actual, o dentro de las carpetas `datasets` o `notebooks`. 
+- Python
+- pandas para la manipulación de datos.
+- Matplotlib y seaborn para visualizaciones.
+- Jupyter Notebook para análisis interactivos.
 
-Ejecuta el script `EDA.py` con Python. Puedes modificar los parámetros en la función `execute_analysis` para personalizar el análisis según tus necesidades.
+## Cómo Utilizar
+
+Para ejecutar el análisis:
+1. Clona el repositorio a tu máquina local.
+2. Asegúrate de tener instaladas las dependencias mencionadas.
+3. Coloca tus datos en el directorio `data/`.
+4. Ejecuta los scripts o notebooks según tus necesidades.
 
 ```bash
+git clone https://github.com/aldomelladoop/s5_proyecto_integrado.git
+cd s5_proyecto_integrado
 python EDA.py
